@@ -1,89 +1,802 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-    form {
-        text-align: center;
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;        
-        position: fixed;
-          left: 0px;
-          right: 0px;
-          top: 200px;
-    }
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W3SRKRG');</script>
+<!-- End Google Tag Manager -->
 
-input {
-    font-size: 20px;
-padding: 20px;
-border: 2px solid #111;
-border-radius: 5px;
-background-color: rgba(51, 51, 51, 0.0);
-color: #fff;
-}
-input:hover {
-background-color: rgba(51, 51, 51, 0.4);
-}
-
-
-h1{
-    width: 10%;
-    color: #333;
-      font-size: 50px;
-    text-align: center;
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
-    position: fixed;
-    left: 45%;
-}
-
-
-body {
-background-color: #333;
-}
-
-
-img {
-  opacity: 0.5;
-  display: block;
-  width: 100%;
-  height: auto;
-  backface-visibility: hidden;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  filter:contrast(125%);
-}
-
-p {
-        text-align: center;
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;        
-        position: fixed;
-          left: 0px;
-          right: 0px;
-          top: 260px;
-}
-</style>
-</head>
-<body>
-    <img src="https://flhermes.files.wordpress.com/2021/09/cropped-af.jpg">
-<h1>Login</h1>
-<form id="your_form" onsubmit="yourFunction()">
-<input type="text" placeholder="First Part Of Email" name="keywords" required>
-<p>("example123" not "example123@example.com")</p>
-<input type="submit" value="Login">
-</form>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M2Y9J0KKHX"></script>
 
 <script>
-    
-function yourFunction(){
-    var action_src = "https://flhermes.wordpress.com/" + document.getElementsByName("keywords")[0].value;
-    var your_form = document.getElementById('your_form');
-    your_form.action = action_src ;
-}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M2Y9J0KKHX');
 </script>
+
+  <link rel="shortcut icon" href="/Logo.png">
+  <link rel="apple-touch-icon" href="/Logo.png">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>FL Browser</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  
+
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    
+  <style id="compiled-css" type="text/css">
+    /* EOS */
+  </style>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  
+    <style> 
+
+     body {
+    background-color: #BFC7CE;
+    font-family: raleway, sans serif;
+    overflow-x: hidden;
+     }
+
+    input {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+    }
+
+    #myInput {
+    text-align: left;
+    width: 50%;
+    color: #fff;
+    background-color: #929872;
+    border: 4px solid #929872;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: fixed;
+    top: 200px;
+    left: 25%;
+    z-index: 3;
+    }
+    
+    #searchBar {
+    width: 100%;
+    height: 82px;
+    background-color: #778793;
+    border: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    }
+
+    #home {
+      width: 100%;
+    text-align: center;
+    position: absolute;
+    color: #778793;
+    top: 150px;
+    animation-name: color-change;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    }
+    
+    @keyframes color-change {
+     0% { opacity: 0%}
+     100% { opacity: 100;}
+    }
+    .searchResults {
+      color: #778793;
+    background-color: #929872;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 80px;
+    padding-left: 15px;
+    width: 50%;
+    position: relative; 
+    left: 25%;
+    top: 100px;
+    }
+    
+    #myLogin {
+    text-align: left;
+    width: 15%;
+    background-color: #929872;
+    border: 4px solid #929872;
+    color: #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+     position: fixed;
+    top: 20px;
+    right: 150px;
+    z-index: 4;
+    }
+
+    #myPass {
+    text-align: left;
+    width: 15%;
+    background-color: #929872;
+    border: 4px solid #929872;
+    color: #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+     position: fixed;
+    top: 20px;
+    right: 150px;
+    z-index: 5;
+    display: none;
+    }
+
+
+    #myLoginButton {
+    font-size: 15;
+    text-align: center;
+    width: 80px;
+    color: #fff;
+    background-color: #929872;
+    border: 4px solid #929872;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+     position: fixed;
+    top: 20px;
+    right: 65px;
+    z-index: 4;
+    }
+
+
+    #myTable {
+    width: 100%;
+    z-index:2;
+    }
+    a {
+     color: black; 
+     text-decoration: none;
+     }
+     
+     iframe {
+     border: none;
+     }
+
+
+
+
+/** Top Sites **/
+/** Top Sites **/
+/** Top Sites **/
+/** Top Sites **/
+/** Top Sites **/
+
+
+    #ts {
+      text-align: center;
+      width: 30%;
+     position: absolute;
+     right: 35%;
+     top: 250px;
+    }
+
+    .topSiteRightText {
+    text-align: center;
+      width: 10%;
+     position: absolute;
+     right: 37%;
+     top: 470px;
+    }
+
+    .topSiteRightImg {
+      border: 5px solid #929872;
+      border-radius: 5px;
+    width: 10%;
+     position: absolute;
+     right: 37%;
+     top: 315px;
+    }
+
+    .topSiteLeftText {
+    text-align: center;
+      width: 10%;
+     position: absolute;
+     left: 37%;
+     top: 470px;
+    }
+
+    .topSiteLeftImg {
+      border: 5px solid #929872;
+      border-radius: 5px;
+    width: 10%;
+     position: absolute;
+     left: 37%;
+     top: 315px;
+    }
+
+    #topSites img:hover{
+      opacity: .8;
+    }
+
+    #topSites a:hover {
+     opacity: .8;
+     color: #929872;
+    }
+
+/** Top Sites **/
+/** Top Sites **/
+/** Top Sites **/
+/** Top Sites **/
+/** Top Sites **/
+    #flExchange {
+      margin-top: 200px;
+    }
+
+
+    #mapCoSale {
+      border: 3px solid #929872;
+      border-radius: 3px;
+      background-color: #929872;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 25px;
+      position:fixed;
+      top: 85px; 
+      left: 10px;
+      width: 15%;
+
+    } 
+    
+    #sonicAd {
+      border: 3px solid #929872;
+      border-radius: 3px;
+      background-color: #929872;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 25px;
+      position:fixed;
+      top: 85px; 
+      right: 10px;
+      width: 15%;
+
+    } 
+
+    #carbonAd {
+      border: 3px solid #929872;
+      border-radius: 3px;
+      background-color: #929872;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 25px;
+      position: fixed;
+      top: 510px; 
+      right: 10px;
+      width: 15%;
+      z-index: 5;
+    } 
+
+    #adTopLeft {
+      color: #3B444B;
+      text-align: left;
+      position: fixed;
+      top: 70px; 
+      left: 4.5%;
+      z-index: 3;
+    }
+
+     #adTopRight {
+      color: #3B444B;
+      text-align: right;
+      position: fixed;
+      top: 70px; 
+      right: 4.5%;
+      z-index: 3;
+    }
+
+    #adbottomleft {
+      color: #3B444B;
+      text-align: left;
+      font-size: 13px;
+      position: fixed;
+      top: 500px; 
+      right: 4.5%;
+      z-index: 6;
+    }
+
+.sidepanel  {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #929872;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+      z-index: 5;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #778793;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 4;
+}
+
+.openbtn:hover {
+  color: #929872;
+}
+
+#notification {
+  width: 8px;
+  height: 8px;
+  background-color: #e6b800;
+  border-radius: 5px;
+  border: 2px solid #e6b800;
+  position: fixed;
+  top: 26px;
+  right: 27px;
+  z-index: 4;
+}
+
+#notificationCRA {
+  width: 8px;
+  height: 8px;
+  background-color: #e6b800;
+  border-radius: 5px;
+  border: 2px solid #e6b800;
+  position: fixed;
+  top: 383px;
+  right: 41px;
+  z-index: 4;
+  display: none;
+}
+
+</style>
+
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3SRKRG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+      <div id="searchBar"></div>
+        <div id="search">
+              <form id="myForm">
+  <input type="text" name="search" id="myInput" onkeyup="mFunction()" placeholder="Search...">
+ </form>
+
+ <div id="loginForm">
+   <form>
+     <input type="text" name="login" id="myLogin"  onkeyup="lFunction()" placeholder="Email...">
+     <input type="password" name="login" id="myPass"  onkeyup="pFunction()" placeholder="Password...">
+   </form>  
+        <button id="myLoginButton" onclick="login()">Next</button>
+ </div>  
+       
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+
+
+        <div id="topSites">
+         <h2 id="ts">Top Sites</h2>
+        <div>
+         <a href="https://tritonco.wordpress.com/" target="_blank">
+          <img src="https://tritonco.files.wordpress.com/2021/09/cropped-triton_logo.png" class="topSiteRightImg"></a>
+          <a href="https://tritonco.wordpress.com/" target="_blank"><h4  class="topSiteRightText">Triton</h4></a>
+        </div>
+        <div>
+          <a href="https://flmap.wordpress.com/" target="_blank">
+          <img src="https://flmap.files.wordpress.com/2021/06/cropped-add-a-heading-6.png" class="topSiteLeftImg"></a>
+         <a href="https://flmap.wordpress.com/" target="_blank"><h4 class="topSiteLeftText">Map Co.</h4></a>
+        </div>
+        </div>
+
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+       <!-- Top Sites -->
+
+      <!-- Buttons -->
+      <!-- Buttons -->
+      <!-- Buttons -->
+      <!-- Buttons -->
+      <!-- Buttons -->
+
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Add%20your%20website&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20', 'mail');event.preventDefault()" href="mailto:mattgt933@gmail.com">Add your site</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Change%20your%20website%20url&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Email:%20%20%20%20%20Password:%20%20%20%20%20Old%20website%20url:%20%20%20%20%20New%20website%20URL:%20', 'mail');event.preventDefault()" href="mailto:mattgt933@gmail.com">Change your site url</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Get%20more%20keywords&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Amount%20of%20keywords:%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com">Get more keywords</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Promote%20Your%20Site&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com">Promote your site</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Post%20an%20ad&body=Fill%20in%20the%20blanks.%205SW/Week%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Ad%20placement%20(Top%20left,%20top%20right,%20left%20right,%20etc.)%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com">Post an Ad</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Make%20an%20account&body=Fill%20in%20the%20blanks.%20%20%20%20Pro%20Account%20Is%203SW/Month.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Password:%20%20%20%20%20FL%20Exchange%20Account%20Number:%20', 'mail');event.preventDefault()" href="mailto:mattgt933@gmail.com" id="CRALink">Create your account</a><div id="notificationCRA"></div>
+
+    <a href="https://flcarbonco.wordpress.com/" id="carboncoad" style="display: none">
+   <p id="adbottomleft">ADVERTISEMENT</p>
+ <img src="/noname.png" id="carbonAd">
+   </a> 
+</div>
+
+<button class="openbtn" onclick="openNav()">☰</button><div id="notification"></div> 
+<script>
+    var noteVal = 2;
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "260px";
+  $('#carboncoad').show(500);
+
+  if (noteVal == 2) {
+  $("#notificationCRA").show(250);
+  }
+  else{
+    $("#notificationCRA").hide();
+  }
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+  $('#carboncoad').hide();
+  $("#notificationCRA").hide(250);
+}
+
+$('#CRALink').click(function(){
+  $('#notificationCRA').hide(250);
+  $('#notification').hide(250);
+  noteVal = 5;
+});
+</script>  
+
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+
+<div id="ads">
+   <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Post%20an%20ad&body=Fill%20in%20the%20blanks.%205SW/Week%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Ad%20placement%20(Top%20left,%20top%20right,%20left%20right,%20etc.)%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com" id="mapcosaleatag">
+   <p id="adTopLeft">ADVERTISEMENT</p>
+ <img src="/Post_an_ad.png" id="mapCoSale">
+   </a>
+
+
+   <a href="https://tritonco.wordpress.com/logos/" id="mapcosaleatag">
+   <p id="adTopRight">ADVERTISEMENT</p>
+ <img src="/triton_logo_ad.png" id="sonicAd">
+   </a>
+    
+
+
+
+</div>   
+
+
+
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+      <!-- ADVERTISEMENTS -->
+ </div>
+ <nav>
+ <table id="myTable" style="display: none;">
+ <tbody><tr class="header">
+<th  style="text-align: center; position: relative; top: 100px;">Search Results</th>
+</tr>
+
+
+ <tr>  
+ <td>
+ <div class="searchResults" onclick="https://mavikarchitecturestudio.wordpress.com/" id="mavikdiva">
+  <a target="_blank"  href="https://mavikarchitecturestudio.wordpress.com/" onclick="captureOutboundLink('https://mavikarchitecturestudio.wordpress.com/'); return false;"><p>Mavik</p>
+   <iframe src="https://mavikarchitecturestudio.wordpress.com/" width="100%" height="400px"></iframe>
+<p style="display: none;" class="keywords">Keywords: mavik studio Architecture Studio architecture Joe joe</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+
+<tr>  
+ <td>
+ <div target="_blank" class="searchResults"onclick="https://flmap.wordpress.com/" id="mapcodiva">
+  <a target="_blank"  href="https://flmap.wordpress.com" onclick="captureOutboundLink('https://flmap.wordpress.com'); return false;"><p>Map Co.</p>
+   <iframe target="_blank" src="https://flmap.wordpress.com/" onclick="https://flmap.wordpress.com/" width="100%" height="400px"></iframe>
+<p style="display: none;" class="keywords">Keywords: map co. MAP CO. Map Co. maps logo logos photo photos free Maps Logo Logos Photo Photos Free Matthew matthew so So</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+
+ <tr>  
+ <td>
+ <div target="_blank" class="searchResults" onclick="https://tritonco.wordpress.com/">
+  <a target="_blank"  href="https://tritonco.wordpress.com/" onclick="captureOutboundLink('https://tritonco.wordpress.com/'); return false;"><p>Triton</p>
+   <iframe target="_blank" src="https://tritonco.wordpress.com/" onclick="https://tritonco.wordpress.com/" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: matthew Matthew triton FL Fl website Website websites Websites logo logos photo photos Logo Logos Photo Photos so So</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+<tr>  
+ <td>
+ <div target="_blank" class="searchResults" onclick="https://sites.google.com/view/fl-exchange/" >
+  <a target="_blank"  href="https://sites.google.com/view/fl-exchange/" onclick="captureOutboundLink('https://sites.google.com/view/fl-exchange/'); return false;"><p>FL exchange</p>
+   <img target="_blank" src="https://fl-browser.w3spaces.com/FL_Exchange_Google_Chrome.png?bypass-cache=1627842632" onclick="https://sites.google.com/view/fl-exchange/" width="100%" height="400px">
+   <p style="display: none;" class="keywords">Keywords: matthew Matthew bank Bank login fl exchange loan apply for a Loan create an account FL Fl</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+ <tr>  
+ <td>
+ <div class="searchResults" onclick="https://mavikarchitecturestudio.wordpress.com/" id="mavikdivb">
+  <a target="_blank"  href="https://mavikarchitecturestudio.wordpress.com/" onclick="captureOutboundLink('https://mavikarchitecturestudio.wordpress.com/'); return false;"><p>Mavik</p>
+   <iframe src="https://mavikarchitecturestudio.wordpress.com/" width="100%" height="400px"></iframe>
+<p style="display: none;" class="keywords">Keywords: mavik studio Architecture Studio architecture Joe joe</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://sites.google.com/view/flsupplyco/">
+  <a target="_blank"  href="https://sites.google.com/view/flsupplyco/" onclick="captureOutboundLink('https://sites.google.com/view/flsupplyco/'); return false;"><p>FL Supply Co.</p>
+   <iframe src="https://sites.google.com/view/flsupplyco/" onclick="https://sites.google.com/view/flsupplyco/" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: David david fl supply co. free glass metal</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://sites.google.com/view/wanderlust-studios/home?authuser=0">
+  <a target="_blank"  href="https://sites.google.com/view/wanderlust-studios/home?authuser=0" onclick="captureOutboundLink('https://sites.google.com/view/wanderlust-studios/home'); return false;"><p>Wanderlust Studios</p>
+   <iframe src="https://sites.google.com/view/wanderlust-studios/home?authuser" onclick="https://sites.google.com/view/wanderlust-studios/home?authuser=0" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: Studio Inga wanderlust adobe clay mug custom</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://sites.google.com/view/wanderlust-cafe/store">
+  <a target="_blank"  href="https://sites.google.com/view/wanderlust-cafe/store" onclick="captureOutboundLink('https://sites.google.com/view/wanderlust-cafe/store'); return false;"><p>Wanderlust Cafe</p>
+   <iframe src="https://sites.google.com/view/wanderlust-cafe/store" onclick="https://sites.google.com/view/wanderlust-cafe/store" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: Inga paseries wanderlust cafe pie scones</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://sjskxmxksoowowk.wordpress.com/">
+  <a target="_blank"  href="https://sjskxmxksoowowk.wordpress.com/" onclick="captureOutboundLink('https://sjskxmxksoowowk.wordpress.com/'); return false;"><p>Patent office</p>
+   <iframe src="https://sjskxmxksoowowk.wordpress.com/" onclick="https://sjskxmxksoowowk.wordpress.com/" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: Office Patten Items Things David david</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+<!-- Sonic -->
+<!-- Sonic -->
+<!-- Sonic -->
+<!-- Sonic -->
+
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://sites.google.com/view/forcelandia-gov/home">
+  <a target="_blank"  href="https://sites.google.com/view/forcelandia-gov/home" onclick="captureOutboundLink('https://sites.google.com/view/forcelandia-gov/home'); return false;"><p>Forcelandia Gov</p>
+   <iframe src="https://sites.google.com/view/forcelandia-gov/home" onclick="https://sites.google.com/view/forcelandia-gov/home" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: FL fl gov Gov forcelandia forcelandian president vote</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://sites.google.com/view/theforcelandaingazette/home?authuser=1">
+  <a target="_blank"  href="https://sites.google.com/view/theforcelandaingazette/home?authuser=1" onclick="captureOutboundLink('https://sites.google.com/view/theforcelandaingazette/home'); return false;"><p>Forcelandain Gazette</p>
+   <iframe src="https://sites.google.com/view/theforcelandaingazette/home?authuser=1" onclick="https://sites.google.com/view/theforcelandaingazette/home?authuser=1" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: Joe Inga libertarian forcelandain gazette paper news </p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://rockbackinc.wordpress.com/">
+  <a target="_blank"  href="https://rockbackinc.wordpress.com/" onclick="captureOutboundLink('https://rockbackinc.wordpress.com/'); return false;"><p>Rockback inc.</p>
+   <iframe src="https://rockbackinc.wordpress.com/" onclick="https://rockbackinc.wordpress.com/" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: David david rockback inc. Contracting Construction construction</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://flsonic.wordpress.com/">
+  <a target="_blank"  href="https://flsonic.wordpress.com/" onclick="captureOutboundLink('https://flsonic.wordpress.com/'); return false;"><p>Sonic Photography</p>
+   <iframe src="https://flsonic.wordpress.com/" onclick="https://flsonic.wordpress.com/" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: sonic photography David david Photo Sonic</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+<tr>  
+ <td>
+ <div class="searchResults"  onclick="https://flecommerce.wordpress.com/">
+  <a target="_blank"  href="https://flecommerce.wordpress.com/" onclick="captureOutboundLink('https://flecommerce.wordpress.com/'); return false;"><p>FL ecomerce exchange solution</p>
+   <iframe src="https://flecommerce.wordpress.com/" onclick="https://flecommerce.wordpress.com/" width="100%" height="400px"></iframe>
+   <p style="display: none;" class="keywords">Keywords: David Bank login e-comerce</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+ </tbody></table>
+ </nav>
+ </div>
+  
+
+    <script type="text/javascript">//<![CDATA[
+
+$(document).ready(function(){
+$('table').hide();
+
+
+   $("#myInput").keyup(function(){
+         var searchVal = $('#myInput').val();
+    if(searchVal == ""){
+        $('table').hide();
+        $('#myInput').animate({top: "200px", width: "50%", left: "25%"}, 625);
+    }
+    else if(searchVal == " "){
+     $('table').hide(); 
+     $('#myInput').animate({top: "200px", width: "50%", left: "25%"}, 625);
+    }
+    else{
+        $('table').show();
+        $('table tr td').show();
+        $('table tr td:not(:contains("' + searchVal + '"))').hide();
+        $('#myInput').animate({top: "17px", width: "60%", left: "10px"}, 625);
+    }
+});
+
+
+$("#myInput").keyup(function(){
+    var searchVal = $('#myInput').val();
+    if( searchVal == "ma" || searchVal == "Ma"){
+        $('#mavikdivb').hide();
+        $('#mavikdiva').show();
+    }
+    else{
+       $('#mavikdiva').hide();
+       $('#mavikdivb').show();
+    }
+});
+
+
+
+$('#myLoginButton').click(function(){
+    var loginVal = $('#myLogin').val();
+    var passVal = $('#myPass').val();
+    if(loginVal == "mattgt933@gmail.com"){
+      $('#myPass').show(250);
+      $("#myLoginButton").text("Login");
+      if(passVal == "myPassword")
+        $("#myLoginButton").click(function(){
+        $("#myLoginButton").text("Logout");
+        $('.keywords').show();
+        $('#ads').hide();
+        
+  });
+    }
+    /*
+    else if(loginVal == "email"){
+      $('#myPass').show(250);
+      $("#myLoginButton").text("Login");
+      if(passVal == "password")
+        $("#myLoginButton").click(function(){
+        $("#myLoginButton").text("Logout");
+        $('.keywords').show();
+        $('#ads').hide();
+        
+  });
+    }
+    */
+
+    else{
+      
+       $("#myLoginButton").click(function(){
+         $('#myPass').hide();
+        $("#myLoginButton").text("Login");
+        $('#ads').show();
+        $('.keywords').hide();
+  });
+    }
+});
+
+
+});
+
+  //]]></script>
+
+
+
+
 </body>
 </html>
