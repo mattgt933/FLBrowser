@@ -744,6 +744,8 @@ $("#myInput").keyup(function(){
 $('#myLoginButton').click(function(){
     var loginVal = $('#myLogin').val();
     var passVal = $('#myPass').val();
+    var logBTNVal = $('#myLoginButton').val();
+  
     if(loginVal == "mattgt933@gmail.com"){
       $('#myPass').show(250);
       $("#myLoginButton").text("Login");
@@ -752,6 +754,13 @@ $('#myLoginButton').click(function(){
         $("#myLoginButton").text("Logout");
         $('.keywords').show();
         $('#ads').hide();
+          if(logBTNVal == "Logout")
+        $("#myLoginButton").click(function(){
+        $("#myLoginButton").text("Login");
+        $('.keywords').hide();
+        $('#ads').show();
+          $('#myLogin').val("");
+          $('#myPass').val("");
         
   });
     }
