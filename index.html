@@ -749,19 +749,17 @@ $('#myLoginButton').click(function(){
     if(loginVal == "mattgt933@gmail.com"){
       $('#myPass').show(250);
       $("#myLoginButton").text("Login");
-      if(passVal == "myPassword")
+      if(passVal == "myPassword"){
         $("#myLoginButton").click(function(){
         $("#myLoginButton").text("Logout");
         $('.keywords').show();
         $('#ads').hide();
-          if(logBTNVal == "Logout")
+          if(logBTNVal == "Logout"){
         $("#myLoginButton").click(function(){
         $("#myLoginButton").text("Login");
         $('.keywords').hide();
         $('#ads').show();
-          $('#myLogin').val("");
-          $('#myPass').val("");
-        
+        }} 
   });
     }
     /*
