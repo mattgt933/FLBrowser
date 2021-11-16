@@ -746,7 +746,7 @@ $('#myLoginButton').click(function(){
     var passVal = $('#myPass').val();
     var logBTNVal = $('#myLoginButton').val();
   
-    if(loginVal == "mattgt933@gmail.com"){
+    if(loginVal == "mattgt933@gmail.com")
       $('#myPass').show(250);
       $("#myLoginButton").text("Login");
       if(passVal == "myPassword"){
@@ -754,12 +754,6 @@ $('#myLoginButton').click(function(){
         $("#myLoginButton").text("Logout");
         $('.keywords').show();
         $('#ads').hide();
-          if(logBTNVal == "Logout"){
-        $("#myLoginButton").click(function(){
-        $("#myLoginButton").text("Login");
-        $('.keywords').hide();
-        $('#ads').show();
-        }} 
   });
     }
     /*
@@ -775,6 +769,13 @@ $('#myLoginButton').click(function(){
   });
     }
     */
+  
+  else if(logBTNVal == "Logout"){
+        $("#myLoginButton").click(function(){
+        $("#myLoginButton").text("Login");
+        $('.keywords').hide();
+        $('#ads').show(); 
+  }
 
     else{
       
