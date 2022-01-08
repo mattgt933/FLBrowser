@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculator</title>
+<title>Page Title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100;200;300;400&display=swap" rel="stylesheet"> 
@@ -119,22 +118,14 @@ Value of N: <div class="slidecontainer">
 </div><br>
 Value of A: <input type="text" id="Aval" class="inputStyle"><br>
 Value of B: <input type="text" id="Bval" class="inputStyle"><br><br>
-<button onclick="print()" class="buttonStyle">Get Value</button>
+<button onclick="getVal()" class="buttonStyle">Get Value</button>
 <h2 id="output"></h2>
 
 <script>
-    
-  if(Nval == 3) {
-      window.location.replace("https://flbrowser.vercel.app/calculate/3.html");
-      window.location.href = "https://flbrowser.vercel.app/calculate/3.html";
-  }
+
  
- function print() {
-     
-     if(Nval == 3) {
-      window.location.replace("https://flbrowser.vercel.app/calculate/3.html");
-      window.location.href = "https://flbrowser.vercel.app/calculate/3.html";
-  }
+ function getVal() {
+
  var n = document.getElementById("Nval").value;
  var a = document.getElementById("Aval").value;
  var b = document.getElementById("Bval").value;
@@ -149,27 +140,27 @@ Value of B: <input type="text" id="Bval" class="inputStyle"><br><br>
  var TermFive;
  
  if (n == 2) {
-    TermTwo = 2 * b + a;
-    TermThree = b * b;
+    var TermTwo = 2 * b + a;
+    var TermThree = b * b;
 
-    Terms = TermOne + Space + TermTwo + Space + TermThree;
+    var Terms = TermOne + Space + TermTwo + Space + TermThree;
  } else {
      if (n == 3) {
-      TermTwo = 3 * bT + aT + "<sup>2</sup>";
-      TermThree = 3 * bT * bT + aT;
-      TermFour = bT * bT * bT;
+      var TermTwo = 3 * b + a + "<sup>2</sup>";
+      var TermThree = 3 * b * b + a;
+      var TermFour = b * b * b;
 
-      Terms = TermOne + Space + TermTwo + Space + TermThree + Space + TermFour;
+      var Terms = TermOne + Space + TermTwo + Space + TermThree + Space + TermFour;
     } else { 
          if (n == 4) {
-             TermTwo = 4 * bF + aF + "<sup>3</sup>";
-             TermThree = 6 * bF * bF + aF + "<sup>2</sup>";
-             TermFour = 4 * bF * bF * bF + aF;
-             TermFive = bF * bF * bF * bF;
+             var TermTwo = 4 * b + a + "<sup>3</sup>";
+             var TermThree = 6 * b * b + a + "<sup>2</sup>";
+             var TermFour = 4 * b * b * b + a;
+             var TermFive = b * b * b * b;
 
-             Terms = TermOne + Space + TermTwo + Space + TermThree + Space + TermFour + Space + TermFive;
+             var Terms = TermOne + Space + TermTwo + Space + TermThree + Space + TermFour + Space + TermFive;
           } else {
-           Terms = "ENTER A NEW VALUE!!!";
+           var Terms = "ENTER A NEW VALUE!!!";
     }
        } 
  }  
