@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100;200;300;400&display=swap" rel="stylesheet"> 
+        <style>
+          * {
+            font-weight: 200;
+            font-family: 'Lexend Tera', sans-serif;
+          }
+
+            *::selection {
+                color: #fff;
+                background: #929872;
+                font-weight: lighter;
+            }
+
+            body {
+                background-color: #BFC7CE;
+                font-family: raleway, sans serif;
+                overflow-x: hidden;
+            }
+
+    input {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+    }
+
+    input::selection {
+                color: #929872;
+                background: #fff;
+                font-weight: lighter;
+    }
+
+    
+    .inputStyle{
+    text-align: left;
+    width: 50%;
+    color: #fff;
+    background-color: #929872;
+    border: 4px solid #929872;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    }
+
+   .slidecontainer {
+  width: 100%;
+  height: 50px;
+  background-color: #999999;
+  border-radius: 5px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 99%;
+  height: 5px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  position: relative;
+  top: 13px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 65px;
+  height: 25px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background: #929872;
+  cursor: pointer;
+}
+
+    .buttonStyle{
+    text-align: center;
+    width: 20%;
+    color: #fff;
+    background-color: #929872;
+    border: 4px solid #929872;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    }
+
+
+    </style>
+</head>
+<body>
+(A + B)<sup>N</sup><br><br>
+Value of N: <div class="slidecontainer">
+  <input type="range" min="2" max="4" value="2" class="slider" id="Nval">
+</div><br>
+Value of A: <input type="text" id="Aval" class="inputStyle"><br>
+Value of B: <input type="text" id="Bval" class="inputStyle"><br><br>
+<button onclick="print()" class="buttonStyle">Get Value</button>
+<h2 id="output"></h2>
+
+<script>
+
+ 
+ function print() {
+ var n = document.getElementById("Nval").value;
+ var a = document.getElementById("Aval").value;
+ var b = document.getElementById("Bval").value;
+ 
+ var Terms;
+ let Space = " " + "+" + " ";
+ 
+ var TermOne = a + "<sup>" + n + "</sup>";
+ var TermTwo;
+ var TermThree;
+ var TermFour;
+ var TermFive;
+ 
+ if (n == 2) {
+    TermTwo = 2 * b + a;
+    TermThree = b * b;
+
+    Terms = TermOne + Space + TermTwo + Space + TermThree;
+ } else {
+     if (n == 3) {
+      TermTwo = 3 * bT + aT + "<sup>2</sup>";
+      TermThree = 3 * bT * bT + aT;
+      TermFour = bT * bT * bT;
+
+      Terms = TermOne + Space + TermTwo + Space + TermThree + Space + TermFour;
+    } else { 
+         if (n == 4) {
+             TermTwo = 4 * bF + aF + "<sup>3</sup>";
+             TermThree = 6 * bF * bF + aF + "<sup>2</sup>";
+             TermFour = 4 * bF * bF * bF + aF;
+             TermFive = bF * bF * bF * bF;
+
+             Terms = TermOne + Space + TermTwo + Space + TermThree + Space + TermFour + Space + TermFive;
+          } else {
+           Terms = "ENTER A NEW VALUE!!!";
+    }
+       } 
+ }  
+ 
+ document.getElementById("output").innerHTML =  Terms;
+ }
+</script>
+</body>
+</html>
